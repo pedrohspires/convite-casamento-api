@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/convite-casamento-api/docker-compose.yml
+/convite-casamento-api/postgres_data/
