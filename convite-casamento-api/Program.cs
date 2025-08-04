@@ -1,4 +1,6 @@
 using convite_casamento_api;
+using convite_casamento_api.Repositories.Implementations;
+using convite_casamento_api.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +12,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<MyDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
+
+// Repositórios
+builder.Services.AddScoped<IConvidadoRepository, ConvidadoRepository>();
 
 var app = builder.Build();
 
