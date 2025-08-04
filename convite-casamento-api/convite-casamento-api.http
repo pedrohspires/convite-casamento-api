@@ -1,0 +1,6 @@
+@convite_casamento_api_HostAddress = http://localhost:5106
+
+GET {{convite_casamento_api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
